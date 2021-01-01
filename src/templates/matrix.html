@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+   <body>
+      <h1>Code Name</h1>
+      <form action="/" method="post">
+         <input style="text-align:center;width:50px" name="gameId" value="{{ gameId }}">
+         <input name="create" type="submit" value="Create Game">
+      </form>
+      <form action="/" method="get">
+         <input name="random" type="submit" value="Random Game">
+      </form>
+      <br>
+      <table border = 1>
+         {% for line in data %}
+            <tr>
+               {% for cell in line %}
+                  <td style="text-align:center;width:50px;height:25px" bgcolor="{{ cell }}"></td>
+               {% endfor %}
+            </tr>
+         {% endfor %}
+      </table>
+      <p>... {{ starter }} team can start the game !</p>
+   </body>
+</html>
