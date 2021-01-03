@@ -2,9 +2,11 @@ from flask import Flask, render_template, request
 import pprint
 app = Flask(__name__)
 from codename import *
+import os
 
+prefix=os.getenv("ROOT_URL","/") # ROOT_URL="/code-name/"
 
-@app.route('/', methods=['POST','GET'])
+@app.route(prefix, methods=['POST','GET'])
 def create_game():
 
     cn=CodeName()

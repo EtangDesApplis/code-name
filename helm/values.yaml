@@ -3,3 +3,4 @@ image: etangdesapplis/code-name
 tag: "latest"
 replicaCount: 1
 nodePort: 32023
+prefix: "/code-name/"

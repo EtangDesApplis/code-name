@@ -16,3 +16,6 @@ spec:
       - name: api
         image: "{{ .Values.image }}:{{ .Values.tag }}"
         imagePullPolicy: {{ .Values.pullPolicy }}
+        env:
+        - name: ROOT_URL
+          value: {{ .Values.prefix }}
